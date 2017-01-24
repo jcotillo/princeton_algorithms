@@ -1,7 +1,7 @@
 from linked_list import Node
 from linked_list import LinkedList
 
-class LinkedListQueue(LinkedList):
+class Queue(LinkedList):
     def __init__(self):
         self.head = None
         self.tail = None
@@ -41,7 +41,7 @@ class LinkedListQueue(LinkedList):
             return item
 
 
-queue = LinkedListQueue()
+queue = Queue()
 queue.enqueue("A")
 queue.enqueue("B")
 queue.enqueue("C")
