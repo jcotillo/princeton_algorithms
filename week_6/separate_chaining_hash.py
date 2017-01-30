@@ -38,7 +38,7 @@ class hashST:
 if __name__ == "__main__":
     st = hashST()
     st.put(12, "Monkey") # => i = 3
-    st.put(10, "Pig") # => 
+    st.put(10, "Pig") # =>
     st.put(20, "Rabbit") # => i = 3
     print st.get(42)
     st.put(1, "Elephant")
