@@ -69,11 +69,27 @@ class LinkedList:
 
         return found
 
-list1 = LinkedList()
-list1.add(1)
-list1.add(2)
-list1.add(3)
-print list1.size()
-print list1.search(4)
-print list1.remove(4)
-print list1.remove(3)
+    def __iter__(self):
+        return self._LinkedListIterator(self)
+
+    class _LinkedListIterator:
+        def __init__(self, llist):
+            # start at the head to keep FIFO order
+            self._current = llist.head
+
+        def next(self):
+            if self._current is None:
+                raise StopIteration
+
+            item = self._current.getData()
+            self._current = self._current.getNext()
+            return item
+
+# list1 = LinkedList()
+# list1.add(1)
+# list1.add(2)
+# list1.add(3)
+# print list1.size()
+# print list1.search(4)
+# print list1.remove(4)
+# print list1.remove(3)
