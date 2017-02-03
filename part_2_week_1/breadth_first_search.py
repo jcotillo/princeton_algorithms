@@ -6,7 +6,7 @@ Queue = modl.Queue
 class BFS:
     def __init__(self,graph, s):
         self.graph = graph
-        self.marked = {}
+        self.marked = {k: False for k in self.graph.adjc.keys()}
         self.edgeTo = {}
         self.distances = {}
         self.s = s

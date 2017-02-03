@@ -3,7 +3,7 @@ from graph import Graph
 class DFS:
     def __init__(self,graph, s):
         self.graph = graph
-        self.marked = {}
+        self.marked = {k: False for k in self.graph.adjc.keys()}
         self.edgeTo = {}
         self.s = s
         self._dfs(graph, s)
@@ -13,7 +13,7 @@ class DFS:
         # keep track of the browsed vertices
         self.marked[v] = True
         for w in self.graph.adj(v):
-            if w not in self.marked:
+            if not self.marked[w]:
                 # mark the path of this vertex
                 self.edgeTo[w] = v
                 self._dfs(self.graph, w)
