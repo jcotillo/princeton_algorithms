@@ -7,7 +7,6 @@ class Graph:
         self.V = 0
         self.E = 0
         self.adjc = {}
-        self.keys = self.adjc.keys()
         for v,w in args:
             self.addEdge(v, w)
 
