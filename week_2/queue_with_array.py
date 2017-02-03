@@ -31,12 +31,12 @@ class Queue:
             self._count += 1
             return item
 
-queue = Queue()
-queue.enqueue("A")
-queue.enqueue("B")
-queue.enqueue("C")
-for i in queue:
-    print "I been waiting for so long! -", i
-print(queue.dequeue())
-print(queue.dequeue())
-print(queue.dequeue())
+# queue = Queue()
+# queue.enqueue("A")
+# queue.enqueue("B")
+# queue.enqueue("C")
+# for i in queue:
+#     print "I been waiting for so long! -", i
+# print(queue.dequeue())
+# print(queue.dequeue())
+# print(queue.dequeue())
